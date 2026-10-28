@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Só quem tem o código da equipe (36 caracteres) e está no app consegue ler/gravar
+    match /equipes/{equipe}/processos/{processo} {
+      allow read, write: if request.auth != null && equipe.size() >= 32;
+    }
+  }
+}

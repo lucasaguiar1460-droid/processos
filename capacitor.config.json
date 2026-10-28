@@ -1,0 +1,8 @@
+{
+  "appId": "br.com.l2m.importacoes",
+  "appName": "L2M Importações",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#0f172a"
+  }
+}
